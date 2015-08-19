@@ -23,6 +23,9 @@ public class GriffonFacetImpl_2_0 extends AbstractGriffonFacet {
 
     @Override
     public boolean install() {
+        if(isInstalled())
+            return false;
+
         try {
             createFolders();
         } catch (IOException e) {
